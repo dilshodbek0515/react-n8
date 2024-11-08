@@ -1,0 +1,47 @@
+.rate {
+    max-width: 1400px;
+    height: auto;
+    padding: 10px 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    gap: 30px;
+
+    .rate_text {
+        max-width: 330px;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 54.64px;
+        text-align: left;
+    }
+
+    .rate_large_text {
+        max-width: 640px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        text-align: left;
+        color: #454545;
+    }
+}
+
+@media (max-width:880px) {
+    .rate {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .rate_large_text {
+            text-align: center;
+            font-size: 18px;
+            line-height: normal;
+        }
+
+        .rate_text {
+            text-align: center;
+            font-size: 22px;
+            line-height: normal;
+        }
+    }
+}

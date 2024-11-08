@@ -1,0 +1,115 @@
+.company {
+    max-width: 1400px;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 20px;
+    margin-top: 50px;
+
+    .company_top {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .company_title {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 54.64px;
+            text-align: left;
+            color: #454545;
+        }
+
+        .company_btn {
+            width: 220px;
+            height: 50px;
+            border-radius: 100px;
+            border: 1px solid #454545;
+            color: #454545;
+            transition: .5s;
+
+            &:hover {
+                background-color: #454545;
+                color: white;
+                transition: .5s;
+            }
+        }
+    }
+
+    .company_bottom {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        gap: 30px;
+
+        .com_card {
+            width: 310px;
+            height: 360px;
+            border: 1px solid #D9D9D9;
+            border-radius: 10px;
+            padding: 30px 10px 20px 30px;
+            display: flex;
+            flex-direction: column;
+
+            .img_bg {
+                width: 80px;
+                height: 80px;
+                background: #454545;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .com_title {
+                max-width: 220px;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 26px;
+                text-align: left;
+                color: #454545;
+                margin-top: 80px;
+            }
+
+            .com_desc {
+                max-width: 200px;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20.8px;
+                text-align: left;
+                color: #454545;
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width:692px) {
+    .company {
+        .company_top {
+            .company_title {
+                font-size: 22px;
+            }
+        }
+
+        .company_bottom {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width:520px) {
+    .company {
+        .company_top {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+}

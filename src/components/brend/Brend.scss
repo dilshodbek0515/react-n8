@@ -1,0 +1,85 @@
+.brend {
+    max-width: 1400px;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+
+    .brend_top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .brend_text {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 54.64px;
+            text-align: left;
+            color: #454545;
+        }
+
+        .arrow_wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            .arrow {
+                width: 39px;
+                height: 26px;
+                border-radius: 100px;
+                color: grey;
+                border: 1px solid grey;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: .5s;
+
+                &:hover {
+                    color: black;
+                    transition: .5s;
+                }
+            }
+        }
+    }
+
+    .brend_bottom {
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 310px;
+            height: 112px;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 1px solid gray;
+            border-radius: 10px;
+        }
+    }
+}
+
+@media (max-width:620px) {
+    .brend {
+        padding: 10px;
+
+        .brend_top {
+            .brend_text {
+                font-size: 20px;
+                line-height: normal;
+            }
+        }
+    }
+}

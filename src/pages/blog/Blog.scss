@@ -1,0 +1,64 @@
+.pages_blog {
+    max-width: 1400px;
+    height: auto;
+    padding: 10px 50px;
+    margin: 0 auto;
+
+    .oplata {
+        display: flex;
+        flex-direction: column;
+
+        p {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 21.86px;
+            text-align: left;
+            color: #454545;
+
+            span {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 21.86px;
+                text-align: left;
+                color: #cccaca;
+                margin-right: 10px;
+            }
+        }
+
+        h2 {
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 70.4px;
+            text-align: left;
+            color: #454545;
+            max-width: 320px;
+        }
+    }
+}
+
+@media (max-width:1100px) {
+    .pages_blog {
+        gap: 0px !important;
+        padding: 10px 20px;
+
+        .oplata {
+            margin-bottom: 50px;
+
+            h2 {
+                max-width: 900px;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width:800px) {
+    .contact {
+        .oplata {
+            h2 {
+                font-size: 30px;
+                line-height: normal;
+            }
+        }
+    }
+}

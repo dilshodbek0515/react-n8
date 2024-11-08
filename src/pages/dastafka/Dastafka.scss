@@ -1,0 +1,152 @@
+.dastafka {
+    max-width: 1400px;
+    height: auto;
+    padding: 10px 50px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+
+    .dastafka_top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .oplata {
+            display: flex;
+            flex-direction: column;
+
+            p {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 21.86px;
+                text-align: left;
+                color: #454545;
+
+                span {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 21.86px;
+                    text-align: left;
+                    color: #cccaca;
+                    margin-right: 10px;
+                }
+            }
+
+            h2 {
+                font-size: 64px;
+                font-weight: 700;
+                line-height: 70.4px;
+                text-align: left;
+                color: #454545;
+                max-width: 320px;
+            }
+        }
+
+        .dastafka_wrap {
+            display: flex;
+            flex-direction: column;
+
+            .dastafka_text1 {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 33.6px;
+                text-align: left;
+                color: #000000;
+            }
+
+            .dastafka_text2 {
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 28px;
+                text-align: left;
+                color: #000000;
+                max-width: 640px;
+                margin-top: 30px;
+            }
+
+            .dastafka_text3 {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 33.6px;
+                text-align: left;
+                color: #000000;
+                margin-top: 60px;
+            }
+
+            .dastafka_text4 {
+                max-width: 640px;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 28px;
+                text-align: left;
+                color: #000000;
+                margin-top: 30px;
+            }
+
+            .dastafka_text5 {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 33.6px;
+                text-align: left;
+                color: #000000;
+                margin-top: 60px;
+            }
+
+            .dastafka_text6 {
+                max-width: 640px;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 28px;
+                text-align: left;
+                color: #000000;
+                margin-top: 30px;
+            }
+        }
+    }
+
+    .location {
+        width: 100%;
+        height: 672px;
+        object-fit: contain;
+    }
+}
+
+@media (max-width:1100px) {
+    .dastafka {
+        gap: 0px !important;
+        padding: 10px 20px;
+
+        .dastafka_top {
+            flex-direction: column;
+
+            .oplata {
+                margin-bottom: 50px;
+
+                h2 {
+                    max-width: 900px;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:800px) {
+    .dastafka {
+        .dastafka_top {
+            .oplata {
+                h2 {
+                    font-size: 30px;
+                    line-height: normal;
+                }
+            }
+        }
+
+        .location {
+            width: 100%;
+            height: 100%;
+            margin-top: 30px;
+        }
+    }
+}
