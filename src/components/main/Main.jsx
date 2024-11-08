@@ -1,4 +1,3 @@
-import { memo } from 'react'
 import "./Main.scss"
 import { Swiper, SwiperSlide } from "swiper/react";
 import karusel from "../../assets/images/karusel.png"

@@ -8,7 +8,6 @@ import { TbAntennaBars5 } from "react-icons/tb";
 import { FiShoppingCart } from "react-icons/fi";
 
 import "./Header.scss"
-import { memo } from "react";
 
 const Header = () => {
     return (

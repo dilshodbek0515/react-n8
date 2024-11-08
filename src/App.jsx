@@ -1,6 +1,6 @@
+import { memo } from 'react'
 import './App.scss'
 import Routes from "./routes/Routes"
-import { memo } from 'react'
 function App() {
 
   return (
