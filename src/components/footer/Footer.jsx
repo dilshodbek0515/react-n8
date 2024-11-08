@@ -1,4 +1,5 @@
 import "./Footer.scss"
+import { memo } from "react";
 import foo_logo from "../../assets/images/footer.png"
 import { RiVkLine } from "react-icons/ri";
 import visa from "../../assets/images/visa.png"
@@ -52,4 +53,4 @@ const Footer = () => {
     )
 }
 
-export default Footer
+export default memo(Footer)

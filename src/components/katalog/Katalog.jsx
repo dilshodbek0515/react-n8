@@ -1,4 +1,5 @@
 import "./Katalog.scss"
+import { memo } from "react"
 import { KATALOG } from "../../static"
 
 const obj = [
@@ -26,4 +27,4 @@ const Katalog = () => {
     )
 }
 
-export default Katalog
+export default memo(Katalog)

@@ -1,4 +1,5 @@
 import "./Kompany.scss"
+import { memo } from "react"
 import { COMPANY } from "../../static"
 
 const company = [
@@ -26,4 +27,4 @@ const Kompany = () => {
     )
 }
 
-export default Kompany
+export default memo(Kompany)

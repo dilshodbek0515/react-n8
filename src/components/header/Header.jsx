@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { memo } from "react";
 import logo from "../../assets/images/logo.svg";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import { IoSearch } from "react-icons/io5";
@@ -7,6 +8,7 @@ import { TbAntennaBars5 } from "react-icons/tb";
 import { FiShoppingCart } from "react-icons/fi";
 
 import "./Header.scss"
+import { memo } from "react";
 
 const Header = () => {
     return (
@@ -57,4 +59,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default memo(Header)

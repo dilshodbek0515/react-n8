@@ -1,4 +1,5 @@
 import "./Tovar.scss"
+import { memo } from "react"
 import { TOVAR } from "../../static"
 const tavar = [
     TOVAR?.map((tavar) => (
@@ -34,4 +35,4 @@ const Tovar = () => {
     )
 }
 
-export default Tovar
+export default memo(Tovar)

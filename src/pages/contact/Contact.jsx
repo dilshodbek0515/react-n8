@@ -1,4 +1,5 @@
 import "./Contact.scss"
+import { memo } from "react"
 import location from "../../assets/images/location.png"
 
 const Contact = () => {
@@ -21,4 +22,4 @@ const Contact = () => {
     )
 }
 
-export default Contact
+export default memo(Contact)

@@ -1,8 +1,9 @@
-import React from 'react'
+import { memo } from 'react'
 import "./Main.scss"
 import { Swiper, SwiperSlide } from "swiper/react";
 import karusel from "../../assets/images/karusel.png"
 import "swiper/css";
+import { memo } from "react"
 const Main = () => {
     return (
         <div className='main'>
@@ -32,4 +33,4 @@ const Main = () => {
     )
 }
 
-export default Main
+export default memo(Main)

@@ -1,4 +1,5 @@
 import "./Garant.scss"
+import { memo } from "react"
 
 const Garant = () => {
     return (
@@ -23,4 +24,4 @@ const Garant = () => {
     )
 }
 
-export default Garant
+export default memo(Garant)

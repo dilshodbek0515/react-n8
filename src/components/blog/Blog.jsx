@@ -1,4 +1,5 @@
 import "./Blog.scss"
+import { memo } from "react"
 import { BLOGS } from "../../static"
 const blogs = [
     BLOGS?.map((blog) => (
@@ -23,4 +24,4 @@ const Blog = () => {
     )
 }
 
-export default Blog
+export default memo(Blog)

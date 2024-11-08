@@ -1,4 +1,5 @@
 import "./Error.scss"
+import { memo } from "react"
 import err from "../../assets/images/404.png"
 import { useNavigate } from "react-router-dom"
 const Error = () => {
@@ -13,4 +14,4 @@ const Error = () => {
     )
 }
 
-export default Error
+export default memo(Error)

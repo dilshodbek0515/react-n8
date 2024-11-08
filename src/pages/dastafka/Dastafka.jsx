@@ -1,4 +1,5 @@
 import "./Dastafka.scss"
+import { memo } from "react"
 import location from "../../assets/images/location.png"
 const Dastafka = () => {
     return (
@@ -24,4 +25,4 @@ const Dastafka = () => {
     )
 }
 
-export default Dastafka
+export default memo(Dastafka)

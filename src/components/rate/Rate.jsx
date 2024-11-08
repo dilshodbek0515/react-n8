@@ -1,5 +1,5 @@
 import "./Rate.scss"
-
+import { memo } from "react"
 const Rate = () => {
     return (
         <div className="rate">
@@ -9,4 +9,4 @@ const Rate = () => {
     )
 }
 
-export default Rate
+export default memo(Rate)

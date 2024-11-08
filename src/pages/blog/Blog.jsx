@@ -1,4 +1,5 @@
 import "./Blog.scss";
+import { memo } from "react";
 import BlogComponent from "../../components/blog/Blog";
 
 const BlogPage = () => {
@@ -14,4 +15,4 @@ const BlogPage = () => {
     );
 }
 
-export default BlogPage;
+export default memo(BlogPage);
