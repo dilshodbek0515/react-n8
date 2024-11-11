@@ -1,0 +1,172 @@
+.o_com {
+    display: flex;
+    flex-direction: column;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    .compane {
+        max-width: 1400px;
+        height: auto;
+        padding: 30px 50px;
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+
+        .compane_left {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 540px;
+
+            .links_wrap {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                .glav_compo {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 21.86px;
+                    text-align: left;
+                    color: grey;
+                }
+
+                .compo {
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 21.86px;
+                    text-align: left;
+                    color: #1f1e1e;
+                }
+            }
+
+            .compane_logo {
+                font-size: 64px;
+                font-weight: 700;
+                line-height: 70.4px;
+                text-align: left;
+                text-decoration-skip-ink: none;
+                color: #454545;
+            }
+
+            .compane_card_wrap {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                max-width: 100%;
+                height: auto;
+                gap: 30px;
+
+                .compane_card {
+                    width: 530px;
+                    height: 253px;
+                    border-radius: 15px;
+                    background: #F2F2F2;
+                    padding: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .compane_card_text {
+                        font-size: 64px;
+                        font-weight: 700;
+                        line-height: 70.4px;
+                        text-align: left;
+                        color: #454545;
+                    }
+
+                    .compane_card_text_two {
+                        font-size: 24px;
+                        font-weight: 500;
+                        line-height: 36px;
+                        text-align: left;
+                        color: #454545;
+                    }
+                }
+            }
+        }
+
+        .compane_right {
+            max-width: 640px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            .compane_right_text {
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 30px;
+                text-align: left;
+                color: #454545;
+                max-width: 640px;
+            }
+        }
+    }
+}
+
+@media (max-width:1160px) {
+    .o_com {
+        .compane {
+            .compane_right {
+                .compane_right_text {
+                    font-size: 16px;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1000px) {
+    .o_com {
+        .compane {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+
+            .compane_left,
+            .compane_right,
+            .compane_right_text,
+            .compane_card {
+                width: 100%;
+            }
+
+            .compane_right {
+                .compane_card_wrap {
+                    width: 100%;
+
+                    .compane_card {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:600px) {
+    .o_com {
+        .compane {
+            .compane_left {
+                .compane_logo {
+                    font-size: 30px;
+                }
+
+                .compane_card_wrap {
+                    width: 100%;
+
+                    .compane_card {
+                        width: 100%;
+                        height: 200px;
+                        padding: 15px;
+
+                        .compane_card_text {
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

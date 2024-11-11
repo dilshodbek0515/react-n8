@@ -1,12 +1,19 @@
 import "./Garant.scss"
 import { memo } from "react"
-
+import { Link } from "react-router-dom"
 const Garant = () => {
     return (
         <div className="garant">
             <div className="garant_top">
                 <div className="oplata">
-                    <p><span>Главная</span>Гарантии</p>
+                    <div className="flex gap-5">
+                        <Link to={"/"}>
+                            <p>Главная</p>
+                        </Link>
+                        <Link to={"/garant"}>
+                            <p>Гарантии</p>
+                        </Link>
+                    </div>
                     <h2>Гарантии</h2>
                 </div>
                 <div className="garant_wrap">

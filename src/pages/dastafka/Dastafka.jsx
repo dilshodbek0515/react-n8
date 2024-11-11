@@ -1,12 +1,20 @@
 import "./Dastafka.scss"
 import { memo } from "react"
 import location from "../../assets/images/location.png"
+import { Link } from "react-router-dom"
 const Dastafka = () => {
     return (
         <div className="dastafka">
             <div className="dastafka_top">
                 <div className="oplata">
-                    <p><span>Главная</span>Доставка и оплата</p>
+                    <div className="flex gap-5">
+                        <Link to={"/"}>
+                            <p>Главная</p>
+                        </Link>
+                        <Link to={"/dastafka"}>
+                            <p>Доставка и оплата</p>
+                        </Link>
+                    </div>
                     <h2>Доставка и оплата</h2>
                 </div>
                 <div className="dastafka_wrap">

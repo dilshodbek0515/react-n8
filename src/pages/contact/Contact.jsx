@@ -1,5 +1,6 @@
 import "./Contact.scss"
 import { memo } from "react"
+import { Link } from "react-router-dom"
 import location from "../../assets/images/location.png"
 
 const Contact = () => {
@@ -7,7 +8,14 @@ const Contact = () => {
         <div className="contact">
             <div className="contact_top">
                 <div className="oplata">
-                    <p><span>Главная</span>Контакты</p>
+                    <div className="flex gap-5">
+                        <Link to={"/"}>
+                            <p>Главная</p>
+                        </Link>
+                        <Link to={"/contact"}>
+                            <p>Контакты</p>
+                        </Link>
+                    </div>
                     <h2>Контакты</h2>
                 </div>
                 <div className="contact_wrap">

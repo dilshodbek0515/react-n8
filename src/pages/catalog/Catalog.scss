@@ -1,0 +1,106 @@
+.catalog {
+    max-width: 1400px;
+    height: auto;
+    padding: 20px 50px;
+    margin: 0 auto;
+
+    .catalog_collection {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+
+        .catalog_card {
+            width: 420px;
+            height: 250px;
+            border-radius: 20px;
+            background-color: rgba(241, 241, 241, 0.796);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+            gap: 20px;
+
+            div {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                h3 {
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 22px;
+                    text-align: left;
+                    color: #454545;
+                }
+
+                p {
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 22px;
+                    text-align: left;
+                    color: #454545;
+                }
+            }
+
+            .catalog_img {
+                height: 100%;
+                width: 60%;
+                background: none;
+                border-radius: 20px;
+            }
+        }
+
+    }
+
+    .detail {
+        width: 500px;
+        height: 600px;
+        background-color: dodgerblue;
+        border-radius: 50px;
+        position: relative;
+        z-index: 1111;
+    }
+}
+
+
+
+.catalog_bottom {
+    max-width: 1400px;
+    height: auto;
+    padding: 20px 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 50px;
+
+    .catalog_bottom_text1 {
+        max-width: 330px;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 54.64px;
+        text-align: left;
+        color: #454545;
+    }
+
+    .catalog_bottom_text2 {
+        max-width: 640px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        text-align: left;
+        color: #454545;
+    }
+}
+
+@media (max-width:870px) {
+    .catalog_bottom {
+        flex-direction: column;
+        padding: 20px;
+
+        .catalog_bottom_text1 {
+            font-size: 35px;
+        }
+    }
+}

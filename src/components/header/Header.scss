@@ -40,12 +40,16 @@
     }
 
     .header_bottom {
+        max-width: 1300px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         gap: 30px;
 
         .logo {
-            height: 35px;
+            width: 250px;
+            height: 50px;
+            object-fit: contain;
         }
 
         .katalog_btn {
@@ -138,12 +142,17 @@
 @media (max-width:1000px) {
     .header {
         .header_bottom {
-            .katalog_btn {
-                display: none;
-            }
-
-            .icons_content:nth-child(2) {
-                display: none;
+            .header_statistic_wrapper {
+                position: fixed;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%);
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                background-color: rgb(178, 209, 241);
+                padding: 20px;
+                z-index: 5;
             }
         }
     }
@@ -157,20 +166,58 @@
     }
 }
 
-@media (max-width:700px) {
+@media (max-width:600px) {
     .header {
         .header_bottom {
             flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
 
-            .forma {
-                width: 300px !important;
-                flex: none;
+            .logo {
+                max-width: 150px;
             }
 
-            .header_statistic_wrapper {
-                display: none;
+            .sidebar_icon {
+                display: block;
+            }
+
+            .header_search_wrap {
+                .katalog_btn {
+                    width: auto;
+                    height: auto;
+                    padding: 6px 10px;
+                    font-size: 16px;
+
+                }
+
+                .forma {
+                    input {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:400px) {
+    .header {
+        .header_bottom {
+            gap: 0px;
+            padding: 0px;
+
+            .header_search_wrap {
+                .katalog_btn {
+                    display: none;
+                }
+
+                .forma {
+                    margin-top: 20px;
+                }
+            }
+
+            .act {
+                .ico {
+                    font-size: 18px;
+                }
             }
         }
     }

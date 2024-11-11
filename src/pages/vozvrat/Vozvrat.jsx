@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "./Vozvrat.scss"
 import { memo } from "react"
 
@@ -6,7 +7,14 @@ const Vozvrat = () => {
         <div className="vozvrat">
             <div className="vozvrat_top">
                 <div className="oplata">
-                    <p><span>Главная</span>Возврат</p>
+                    <div className="flex gap-5">
+                        <Link to={"/"}>
+                            <p>Главная</p>
+                        </Link>
+                        <Link to={"/vozvrat"}>
+                            <p>Возврат</p>
+                        </Link>
+                    </div>
                     <h2>Возврат</h2>
                 </div>
                 <div className="vozvrat_wrap">

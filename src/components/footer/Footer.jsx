@@ -30,7 +30,6 @@ const Footer = () => {
                     <Link className="foo_link" to={"/garant"}>Гарантии</Link>
                     <Link className="foo_link" to={"/contact"}>Контакты</Link>
                     <Link className="foo_link" to={"/blog"}>Блог</Link>
-                    <Link className="foo_link" to={"/error"}>Error</Link>
                 </div>
                 <div className="footer_two">
                     <h3 className="foo_two_text">Товары</h3>
