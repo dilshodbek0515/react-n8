@@ -3,6 +3,7 @@ import Brend from "../../components/brend/Brend";
 import Blog from "../../components/blog/Blog";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Model from "../../components/model/Model";
 
 const BASE_URL = "https://672f3e4f229a881691f24b98.mockapi.io";
 
@@ -13,16 +14,15 @@ const Catalog = () => {
         axios
             .get(`${BASE_URL}/products`)
             .then((res) => {
-                console.log(res.data);
                 setProducts(res.data);
             })
             .catch((err) => console.log(err));
     }, []);
 
     const productItems = products?.map((produc) => (
-        <div className="catalog_card" key={produc.id}>
+        <div className="catalog_card" key={produc.id} onClick={() => setItem(produc)}>
             <div>
-                <h3 onClick={() => setItem(produc)}>{produc.title}</h3>
+                <h3>{produc.title}</h3>
                 <p>От {produc.price} ₽</p>
             </div>
             <img className="catalog_img" src={produc.url} alt="" />
@@ -49,9 +49,16 @@ const Catalog = () => {
 
             {
                 item &&
-                <div className="detail">
-
-                </div>
+                <Model close={setItem}>
+                    <div className="detail">
+                        <img className="detail_img" src={item.url} alt="detail_img" />
+                        <div className="detail_right">
+                            <h3>{item.title}</h3>
+                            <p>{item.description}</p>
+                            <button>See more</button>
+                        </div>
+                    </div>
+                </Model>
             }
         </>
     );

@@ -1,0 +1,50 @@
+.model {
+    .model_owerlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #0009;
+        z-index: 100;
+    }
+
+    .model_content {
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 800px;
+        height: 400px;
+        background: #fff;
+        z-index: 101;
+        opacity: 0;
+        animation: model .5s forwards;
+        border-radius: 20px;
+    }
+}
+
+@keyframes model {
+    to {
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1250px) {
+    .model {
+        .model_content {
+            width: 100%;
+            /* Ekran o'lchamiga qarab moslashuvchan bo'ladi */
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .model {
+        .model_content {
+            width: 90%;
+            /* Ekran o'lchamiga qarab moslashuvchan bo'ladi */
+        }
+    }
+}

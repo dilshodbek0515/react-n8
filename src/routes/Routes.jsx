@@ -11,7 +11,7 @@ import Footer from "../components/footer/Footer"
 import Home from "../pages/home/Home"
 import Catalog from "../pages/catalog/Catalog"
 import Error from "../pages/error/Error"
-
+import Service from "../pages/service/Service"
 
 const Routesone = () => {
     return (
@@ -26,6 +26,7 @@ const Routesone = () => {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/catalog" element={<Catalog />} />
+                <Route path="/service" element={<Service />} />
                 <Route path="*" element={<Error />} />
             </Routes >
             <Footer />

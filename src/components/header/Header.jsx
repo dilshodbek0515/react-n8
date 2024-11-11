@@ -22,6 +22,7 @@ const Header = () => {
                         <Link onClick={() => setToggle(false)} to={"/garant"}>Гарантии</Link>
                         <Link onClick={() => setToggle(false)} to={"/contact"}>Контакты</Link>
                         <Link onClick={() => setToggle(false)} to={"/blog"}>Блог</Link>
+                        <Link onClick={() => setToggle(false)} to={"/service"}>Servis</Link>
 
                     </ul>
                     <div className="header_top_contact">
