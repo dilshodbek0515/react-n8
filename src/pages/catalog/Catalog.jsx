@@ -4,6 +4,7 @@ import Blog from "../../components/blog/Blog";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Model from "../../components/model/Model";
+import { Link } from "react-router-dom";
 
 const BASE_URL = "https://672f3e4f229a881691f24b98.mockapi.io";
 
@@ -22,7 +23,9 @@ const Catalog = () => {
     const productItems = products?.map((produc) => (
         <div className="catalog_card" key={produc.id} onClick={() => setItem(produc)}>
             <div>
-                <h3>{produc.title}</h3>
+                <Link to={`/product/${produc.id}`}>
+                    <h3>{produc.title}</h3>
+                </Link>
                 <p>От {produc.price} ₽</p>
             </div>
             <img className="catalog_img" src={produc.url} alt="" />
@@ -35,8 +38,6 @@ const Catalog = () => {
                     {productItems}
                 </div>
             </div>
-
-
             <Brend />
             <Blog />
             <div className="catalog_bottom">
@@ -55,7 +56,9 @@ const Catalog = () => {
                         <div className="detail_right">
                             <h3>{item.title}</h3>
                             <p>{item.description}</p>
-                            <button>See more</button>
+                            <Link to={`/product/${item?.id}`}>
+                                <button>See more</button>
+                            </Link>
                         </div>
                     </div>
                 </Model>
