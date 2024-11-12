@@ -22,10 +22,16 @@
 
                 .link {
                     font-size: 14px;
-                    font-weight: 600;
+                    font-weight: 700;
                     line-height: 19.12px;
                     text-align: left;
                     color: #625f5f;
+                }
+
+                .nav_color.active {
+                    color: black;
+                    border-bottom: 2px solid black;
+                    padding-bottom: 3px;
                 }
             }
 

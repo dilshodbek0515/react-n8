@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import { memo, useState } from "react";
 import logo from "../../assets/images/logo.svg";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
@@ -15,13 +15,14 @@ const Header = () => {
         <header className="header">
             <div className="header_top">
                 <nav>
-                    <ul className={`navbar ${toggle }`}>
-                        <Link onClick={() => setToggle(false)} to={"/compane"}>О компании</Link>
-                        <Link onClick={() => setToggle(false)} to={"/dastafka"}>Доставка и оплата</Link>
-                        <Link onClick={() => setToggle(false)} to={"/vozvrat"}>Возврат</Link>
-                        <Link onClick={() => setToggle(false)} to={"/garant"}>Гарантии</Link>
-                        <Link onClick={() => setToggle(false)} to={"/contact"}>Контакты</Link>
-                        <Link onClick={() => setToggle(false)} to={"/blog"}>Блог</Link>
+                    <ul className={`navbar ${toggle}`}>
+                        <NavLink className="nav_color" onClick={() => setToggle(false)} to={"/compane"}>О компании</NavLink>
+                        <NavLink className="nav_color" onClick={() => setToggle(false)} to={"/dastafka"}>Доставка и оплата</NavLink>
+                        <NavLink className="nav_color" onClick={() => setToggle(false)} to={"/vozvrat"}>Возврат</NavLink>
+                        <NavLink className="nav_color" onClick={() => setToggle(false)} to={"/garant"}>Гарантии</NavLink>
+                        <NavLink className="nav_color" onClick={() => setToggle(false)} to={"/contact"}>Контакты</NavLink>
+                        <NavLink className="nav_color" onClick={() => setToggle(false)} to={"/blog"}>Блог</NavLink>
+                        <NavLink className="nav_color" onClick={() => setToggle(false)} to={"/catalog"}>Catalog</NavLink>
 
                     </ul>
                     <div className="header_top_contact">
