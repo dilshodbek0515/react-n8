@@ -1,8 +1,11 @@
 import "./Error.scss"
-import { memo } from "react"
+import { memo, useEffect } from "react"
 import err from "../../assets/images/404.png"
 import { useNavigate } from "react-router-dom"
 const Error = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     const navigate = useNavigate()
     return (
         <div className='error'>

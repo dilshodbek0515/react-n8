@@ -1,9 +1,12 @@
 import "./Contact.scss"
-import { memo } from "react"
+import { memo, useEffect } from "react"
 import { Link } from "react-router-dom"
 import location from "../../assets/images/location.png"
 
 const Contact = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <div className="contact">
             <div className="contact_top">

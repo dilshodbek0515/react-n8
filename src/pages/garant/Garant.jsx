@@ -1,7 +1,10 @@
 import "./Garant.scss"
-import { memo } from "react"
+import { memo, useEffect } from "react"
 import { Link } from "react-router-dom"
 const Garant = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <div className="garant">
             <div className="garant_top">

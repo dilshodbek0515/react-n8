@@ -10,10 +10,10 @@ const ProductPage = () => {
     const [count, setCount] = useState(0)
 
     const increment = () => {
-        setCount(count + 1);
+        setCount(p => p + 1);
     };
     const setincrement = () => {
-        setCount(count - 1);
+        setCount(p => p - 1);
     };
     const { id } = useParams();
     console.log(count);
@@ -45,7 +45,11 @@ const ProductPage = () => {
                 <strong>{data.price} 000 ₽ <del>{data.price2} 000 ₽</del></strong>
                 <p className="single_desc">{data.description}</p>
                 <div className="counter">
-                    <div className="count"> <span onClick={() => setincrement()}>-</span>{count} <span onClick={() => increment()}>+</span> </div>
+                    <div className="count">
+                        <span onClick={() => setincrement()}>-</span>
+                        {count}
+                        <span onClick={() => increment()}>+</span>
+                    </div>
                     <button className="korzina">В корзину</button>
                     <button className="heart"><CiHeart /></button>
                 </div>

@@ -1,9 +1,13 @@
 import "./Blog.scss";
-import { memo } from "react";
+import { memo, useEffect } from "react";
 import BlogComponent from "../../components/blog/Blog";
 import { Link } from "react-router-dom"
 
 const BlogPage = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <div className='pages_blog'>
             <div className="oplata">

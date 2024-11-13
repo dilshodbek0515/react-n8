@@ -5,13 +5,14 @@ import { RiVkLine } from "react-icons/ri";
 import visa from "../../assets/images/visa.png"
 import { Link } from "react-router-dom";
 const Footer = () => {
+  
     return (
         <footer className="foo">
             <div className="footer">
                 <div className="footer_one">
-                    <a href="#">
+                    <Link to={"/"}>
                         <img className="footer_logo" src={foo_logo} alt="logo" />
-                    </a>
+                    </Link>
                     <a href="tel:8 (800) 890-46-56">8 (800) 890-46-56</a>
                     <img className="visa" src={visa} alt="visa" />
                     <p className="foo_one_text1">Политика конфидециальности</p>
@@ -24,12 +25,13 @@ const Footer = () => {
                 </div>
                 <div className="footer_two">
                     <h3 className="foo_two_text">Покупателям</h3>
-                    <Link className="foo_link" to={"/"}>О компании</Link>
+                    <Link className="foo_link" to={"/compane"}>О компании</Link>
                     <Link className="foo_link" to={"/dastafka"}>Доставка и оплата</Link>
                     <Link className="foo_link" to={"/vozvrat"}>Возврат</Link>
                     <Link className="foo_link" to={"/garant"}>Гарантии</Link>
                     <Link className="foo_link" to={"/contact"}>Контакты</Link>
                     <Link className="foo_link" to={"/blog"}>Блог</Link>
+                    <Link className="foo_link" to={"/catalog"}>Catalog</Link>
                 </div>
                 <div className="footer_two">
                     <h3 className="foo_two_text">Товары</h3>

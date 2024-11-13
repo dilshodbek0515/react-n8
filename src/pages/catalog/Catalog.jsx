@@ -5,12 +5,21 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Model from "../../components/model/Model";
 import { Link } from "react-router-dom";
+// import React, { useRef, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+import { EffectCards } from 'swiper/modules';
+
 
 const BASE_URL = "https://672f3e4f229a881691f24b98.mockapi.io";
 
 const Catalog = () => {
     const [products, setProducts] = useState(null)
     const [item, setItem] = useState(null)
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     useEffect(() => {
         axios
             .get(`${BASE_URL}/products`)
@@ -52,7 +61,24 @@ const Catalog = () => {
                 item &&
                 <Model close={setItem}>
                     <div className="detail">
-                        <img className="detail_img" src={item.url} alt="detail_img" />
+                        <Swiper
+                            effect={'cards'}
+                            grabCursor={true}
+                            modules={[EffectCards]}
+                            className="mySwiper"
+                        >
+                            <div>
+                                <SwiperSlide>
+                                    <img className="detail_img" src={item.url} alt="detail_img" />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <img className="detail_img" src={item.url} alt="detail_img" />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <img className="detail_img" src={item.url} alt="detail_img" />
+                                </SwiperSlide>
+                            </div>
+                        </Swiper>
                         <div className="detail_right">
                             <h3>{item.title}</h3>
                             <p>{item.description}</p>

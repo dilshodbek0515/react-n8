@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom"
 import "./Vozvrat.scss"
-import { memo } from "react"
+import { memo, useEffect } from "react"
 
 const Vozvrat = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <div className="vozvrat">
             <div className="vozvrat_top">

@@ -1,8 +1,11 @@
 import "./Dastafka.scss"
-import { memo } from "react"
+import { memo, useEffect } from "react"
 import location from "../../assets/images/location.png"
 import { Link } from "react-router-dom"
 const Dastafka = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <div className="dastafka">
             <div className="dastafka_top">

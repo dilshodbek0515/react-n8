@@ -67,11 +67,33 @@
     gap: 30px;
     background-color: aliceblue;
 
-    .detail_img {
+    .swiper {
         width: 300px;
-        height: 300px;
-        border-radius: 20px;
-        background-color: aliceblue;
+        height:330px;
+
+
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 18px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #fff;
+            height: 300px;
+
+
+            .detail_img {
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+                display: block;
+                object-fit: contain;
+            }
+        }
+
+
+       
     }
 
     .detail_right {

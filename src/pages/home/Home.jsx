@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { memo, useEffect } from 'react'
 import Main from "../../components/main/Main"
 import Katalog from "../../components/katalog/Katalog"
 import Kompany from "../../components/kompany/Kompany"
@@ -7,6 +7,9 @@ import Brend from "../../components/brend/Brend"
 import Blog from "../../components/blog/Blog"
 import Rate from "../../components/rate/Rate"
 const Home = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <>
             <Main />

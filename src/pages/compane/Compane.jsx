@@ -1,9 +1,12 @@
-import { memo } from "react"
+import { memo, useEffect } from "react"
 import "./Compane.scss"
 import Brend from "../../components/brend/Brend"
 import Blog from "../../components/blog/Blog"
 import { Link } from "react-router-dom"
 const Compane = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <>
             <div className="o_com">
