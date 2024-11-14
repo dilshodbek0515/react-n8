@@ -3,7 +3,7 @@ import { memo } from "react"
 import { TOVAR } from "../../static"
 const tavar = [
     TOVAR?.map((tavar) => (
-        <div key={tavar} className="tovar_card">
+        <div key={tavar.id} className="tovar_card">
             <div className="tv_img">
                 <img className="tavar_image" src={tavar.image} alt="img" />
                 <img className="heart" src={tavar.heart} alt="heart" />

@@ -68,8 +68,8 @@
     background-color: aliceblue;
 
     .swiper {
-        width: 300px;
-        height:330px;
+        max-width: 300px;
+        height: 330px;
 
 
         .swiper-slide {
@@ -93,7 +93,7 @@
         }
 
 
-       
+
     }
 
     .detail_right {
@@ -191,14 +191,19 @@
 @media (max-width:690px) {
     .detail {
         flex-direction: column;
+        height: auto;
 
         .detail_img {
-            width: 300px;
-            height: 200px;
+            width: 260px;
+            height: 180px;
         }
 
         .detail_right {
             align-items: center;
+
+            h3 {
+                margin-top: 0;
+            }
 
             p {
                 display: none;

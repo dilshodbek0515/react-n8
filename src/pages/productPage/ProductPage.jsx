@@ -46,9 +46,9 @@ const ProductPage = () => {
                 <p className="single_desc">{data.description}</p>
                 <div className="counter">
                     <div className="count">
-                        <span onClick={() => setincrement()}>-</span>
+                        <button disabled={count === 1} onClick={() => setincrement()}>-</button>
                         {count}
-                        <span onClick={() => increment()}>+</span>
+                        <button onClick={() => increment()}>+</button>
                     </div>
                     <button className="korzina">В корзину</button>
                     <button className="heart"><CiHeart /></button>
