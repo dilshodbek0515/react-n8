@@ -1,5 +1,5 @@
 import "./ProductPage.scss"
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useFetch } from "../../hook/useFetch";
 import { CiHeart } from "react-icons/ci";
 import { FaSquareOdnoklassniki, FaVk, FaTelegram, FaSquareWhatsapp } from "react-icons/fa6";
@@ -46,12 +46,14 @@ const ProductPage = () => {
                 <p className="single_desc">{data.description}</p>
                 <div className="counter">
                     <div className="count">
-                        <button disabled={count === 1} onClick={() => setincrement()}>-</button>
+                        <button
+                            disabled={count === 1} onClick={() => setincrement()}>-
+                        </button>
                         {count}
                         <button onClick={() => increment()}>+</button>
                     </div>
                     <button className="korzina">В корзину</button>
-                    <button className="heart"><CiHeart /></button>
+                    <Link to={"/heart"}><button className="heart"><CiHeart /></button></Link>
                 </div>
             </div>
         </div>
