@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Blog from '../../../components/blog/Blog'
 
 const Catalog_blog = () => {
@@ -9,4 +9,4 @@ const Catalog_blog = () => {
     )
 }
 
-export default Catalog_blog
+export default memo(Catalog_blog)

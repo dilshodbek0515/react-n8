@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Brend from '../../../components/brend/Brend'
 const Catalog_brend = () => {
     return (
@@ -8,4 +8,4 @@ const Catalog_brend = () => {
     )
 }
 
-export default Catalog_brend
+export default memo(Catalog_brend)
