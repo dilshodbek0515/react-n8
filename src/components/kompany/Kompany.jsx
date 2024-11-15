@@ -4,7 +4,7 @@ import { COMPANY } from "../../static"
 
 const company = [
     COMPANY?.map((com) => (
-        <div className="com_card" key={com}>
+        <div className="com_card" key={com.id}>
             <div className="img_bg">
                 <img className="com_img" src={com.image} alt="img" />
             </div>

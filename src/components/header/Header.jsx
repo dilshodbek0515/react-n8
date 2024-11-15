@@ -23,6 +23,7 @@ const Header = () => {
                         <NavLink className="nav_color" onClick={() => setToggle(false)} to={"/contact"}>Контакты</NavLink>
                         <NavLink className="nav_color" onClick={() => setToggle(false)} to={"/blog"}>Блог</NavLink>
                         <NavLink className="nav_color" onClick={() => setToggle(false)} to={"/catalog"}>Catalog</NavLink>
+                        <NavLink className="nav_color" onClick={() => setToggle(false)} to={"/heart"}>Heart</NavLink>
 
                     </ul>
                     <div className="header_top_contact">

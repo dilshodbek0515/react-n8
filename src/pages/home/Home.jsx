@@ -8,7 +8,7 @@ import Blog from "../../components/blog/Blog"
 import Rate from "../../components/rate/Rate"
 const Home = () => {
     useEffect(() => {
-        window.scrollTo(0, 0)
+        scrollTo(0, 0)
     }, [])
     return (
         <>

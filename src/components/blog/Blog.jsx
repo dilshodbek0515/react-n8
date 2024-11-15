@@ -3,7 +3,7 @@ import { memo } from "react"
 import { BLOGS } from "../../static"
 const blogs = [
     BLOGS?.map((blog) => (
-        <div className="blog_card" key={blog}>
+        <div className="blog_card" key={blog.id}>
             <img className="blog_img" src={blog.image} alt="blog_img" />
             <h3>{blog.title}</h3>
             <span>{blog.date}</span>

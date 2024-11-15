@@ -13,6 +13,7 @@ import Catalog from "../pages/catalog/Catalog";
 import Error from "../pages/error/Error";
 import Service from "../pages/service/Service";
 import ProductPage from "../pages/productPage/ProductPage";
+import Heart from "../pages/heart/Heart";
 
 const Routesone = () => {
     return (
@@ -28,6 +29,7 @@ const Routesone = () => {
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/catalog" element={<Catalog />} />
                 <Route path="/service" element={<Service />} />
+                <Route path="/heart" element={<Heart />} />
                 <Route path="/product/:id" element={<ProductPage />} />
                 <Route path="*" element={<Error />} />
             </Routes>

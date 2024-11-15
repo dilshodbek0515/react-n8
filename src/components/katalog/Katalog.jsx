@@ -4,7 +4,7 @@ import { KATALOG } from "../../static"
 
 const obj = [
     KATALOG?.map((item) => (
-        <div key={item} className="catalog_card">
+        <div key={item.id} className="catalog_card">
             <div className="catalog_text_wrapper">
                 <p className="name">{item.name}</p>
                 <p className="price">{item.price}</p>
