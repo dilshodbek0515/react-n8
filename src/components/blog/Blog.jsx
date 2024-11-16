@@ -1,6 +1,7 @@
 import "./Blog.scss"
 import { memo } from "react"
 import { BLOGS } from "../../static"
+import { Link } from "react-router-dom"
 const blogs = [
     BLOGS?.map((blog) => (
         <div className="blog_card" key={blog.id}>
@@ -15,7 +16,7 @@ const Blog = () => {
         <div className="blog">
             <div className="blog_top">
                 <h2 className="blogs_title">Блог</h2>
-                <button className="blogs_btn">Перейти в блог</button>
+                <Link to={"/blog"}><button className="blogs_btn">Перейти в блог</button></Link>
             </div>
             <div className="blog_bottom">
                 {blogs}

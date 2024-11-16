@@ -12,7 +12,7 @@ const Heart = () => {
                 state.wishlist.length === 0
                     ?
                     <div className='max-w-[1400px] h-[auto] mx-auto flex items-center justify-center flex-col gap-20'>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJEmhD7q6VJTPvvSEpcc3pQlF1esGAGw7kyA&s" alt="img" />
+                        <img src="https://cdn-icons-png.flaticon.com/512/11127/11127812.png" alt="img" />
                         <Link
                             to={"/catalog"}
                         >

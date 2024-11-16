@@ -6,12 +6,14 @@ import Tovar from "../../components/tovar/Tovar"
 import Brend from "../../components/brend/Brend"
 import Blog from "../../components/blog/Blog"
 import Rate from "../../components/rate/Rate"
+import Sidebar from '../../components/sidebar/Sidebar'
 const Home = () => {
     useEffect(() => {
         scrollTo(0, 0)
     }, [])
     return (
         <>
+            <Sidebar />
             <Main />
             <Katalog />
             <Kompany />

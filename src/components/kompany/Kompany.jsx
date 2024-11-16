@@ -1,6 +1,7 @@
 import "./Kompany.scss"
 import { memo } from "react"
 import { COMPANY } from "../../static"
+import { Link } from "react-router-dom"
 
 const company = [
     COMPANY?.map((com) => (
@@ -18,7 +19,7 @@ const Kompany = () => {
         <div className="company">
             <div className="company_top">
                 <h2 className="company_title">Почему NORNLIGHT?</h2>
-                <button className="company_btn">О компании</button>
+                <Link to={"/compane"}><button className="company_btn">О компании</button></Link>
             </div>
             <div className="company_bottom">
                 {company}

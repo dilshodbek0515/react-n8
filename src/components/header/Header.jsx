@@ -8,9 +8,11 @@ import { TbAntennaBars5 } from "react-icons/tb";
 import { FiShoppingCart } from "react-icons/fi";
 import { BiMenuAltRight } from "react-icons/bi";
 import "./Header.scss"
+import Sidebar from "../sidebar/Sidebar";
 
 const Header = () => {
     const [toggle, setToggle] = useState(false)
+    const [sidebar, setSidebar] = useState(false)
     return (
         <header className="header">
             <div className="header_top">
@@ -23,6 +25,7 @@ const Header = () => {
                         <NavLink className="nav_color" onClick={() => setToggle(false)} to={"/contact"}>Контакты</NavLink>
                         <NavLink className="nav_color" onClick={() => setToggle(false)} to={"/blog"}>Блог</NavLink>
                         <NavLink className="nav_color" onClick={() => setToggle(false)} to={"/catalog"}>Catalog</NavLink>
+                        <NavLink className="nav_color" onClick={() => setToggle(false)} to={"/tovar"}>Товары</NavLink>
                     </ul>
                     <div className="header_top_contact">
                         <a href="tel:8 (800) 890-46-56">8 (800) 890-46-56</a>
@@ -31,7 +34,10 @@ const Header = () => {
                 </nav>
             </div>
             <div className="header_bottom">
-                <BiMenuAltRight className="font-bold text-4xl hidden sidebar_icon" />
+                <BiMenuAltRight onClick={() => setSidebar(true)} className="font-bold text-4xl hidden sidebar_icon" />
+                <Sidebar
+                    setSidebar={setSidebar}
+                    sidebar={sidebar} />
                 <Link to={"/"}>
                     <img className="logo w-[300px] " src={logo} alt="logo" />
                 </Link>

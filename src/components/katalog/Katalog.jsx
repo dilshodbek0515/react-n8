@@ -1,6 +1,7 @@
 import "./Katalog.scss"
 import { memo } from "react"
 import { KATALOG } from "../../static"
+import { Link } from "react-router-dom"
 
 const obj = [
     KATALOG?.map((item) => (
@@ -18,7 +19,7 @@ const Katalog = () => {
         <section className="catalog">
             <div className="catalog_top">
                 <p className="catalog_title">Каталог</p>
-                <button className="catalog_btn">Весь каталог</button>
+                <Link to={"/catalog"}><button className="catalog_btn">Весь каталог</button></Link>
             </div>
             <div className="catalog_bottom">
                 {obj}

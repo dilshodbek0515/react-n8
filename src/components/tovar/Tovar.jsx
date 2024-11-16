@@ -1,6 +1,7 @@
 import "./Tovar.scss"
 import { memo } from "react"
 import { TOVAR } from "../../static"
+import { Link } from "react-router-dom"
 const tavar = [
     TOVAR?.map((tavar) => (
         <div key={tavar.id} className="tovar_card">
@@ -26,7 +27,7 @@ const Tovar = () => {
         <div className="tovar">
             <div className="tovar_top">
                 <h2 className="tovar_title">Популярные товары</h2>
-                <button className="tovar_btn">Все товары</button>
+                <Link to={"/tovar"}><button className="tovar_btn">Все товары</button></Link>
             </div>
             <div className="tovar_bottom">
                 {tavar}
