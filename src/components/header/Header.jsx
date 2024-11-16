@@ -24,7 +24,7 @@ const Header = () => {
                         <NavLink className="nav_color" onClick={() => setToggle(false)} to={"/garant"}>Гарантии</NavLink>
                         <NavLink className="nav_color" onClick={() => setToggle(false)} to={"/contact"}>Контакты</NavLink>
                         <NavLink className="nav_color" onClick={() => setToggle(false)} to={"/blog"}>Блог</NavLink>
-                        <NavLink className="nav_color" onClick={() => setToggle(false)} to={"/catalog"}>Catalog</NavLink>
+                        <NavLink className="nav_color" onClick={() => setToggle(false)} to={"/catalog"}>Каталог</NavLink>
                         <NavLink className="nav_color" onClick={() => setToggle(false)} to={"/tovar"}>Товары</NavLink>
                     </ul>
                     <div className="header_top_contact">
@@ -43,7 +43,7 @@ const Header = () => {
                 </Link>
                 <div className="flex gap-5 text-[24px] act">
                     <Link to={"/heart"}><FaRegHeart className="ico" /></Link>
-                    <FiShoppingCart className="ico" />
+                    <Link to={"/cart"}><FiShoppingCart className="ico" /></Link>
                 </div>
                 <div className="header_search_wrap flex gap-5 items-center w-full">
                     <Link to={"/catalog"}>
@@ -63,10 +63,10 @@ const Header = () => {
                         <TbAntennaBars5 />
                         <span>Сравнение</span>
                     </div>
-                    <div className="icons_content">
+                    <Link to={"/cart"} className="icons_content">
                         <FiShoppingCart />
                         <span>Корзина</span>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </header>

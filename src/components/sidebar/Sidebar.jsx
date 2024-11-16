@@ -18,52 +18,69 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                         <div className="sidebar_left_nav">
                             <Link to={"/heart"}><CiHeart className="sidebar_left_icons" /></Link>
                             <TbAntennaBars5 className="sidebar_left_icons" />
-                            <IoCartOutline className="sidebar_left_icons" />
+                            <Link to={"/cart"}><IoCartOutline className="sidebar_left_icons" /></Link>
                         </div>
                     </div>
                     <nav className="sidebar_wrapper">
                         <NavLink
+                            onClick={() => setSidebar(false)}
                             className={`sidebar_item`}
                             to={"/compane"}
                         >
                             О компании
                         </NavLink>
-                        <NavLink className={`sidebar_item`}
+                        <NavLink
+                            onClick={() => setSidebar(false)}
+                            className={`sidebar_item`}
                             to={"/dastafka"}
                         >
                             Доставка и оплата
                         </NavLink>
-                        <NavLink className={`sidebar_item`}
+                        <NavLink
+                            onClick={() => setSidebar(false)}
+                            className={`sidebar_item`}
                             to={"/vozvrat"}
                         >
                             Возврат
                         </NavLink>
-                        <NavLink className={`sidebar_item`}
+                        <NavLink
+                            onClick={() => setSidebar(false)}
+                            className={`sidebar_item`}
                             to={"/garant"}
                         >
                             Гарантии
                         </NavLink>
-                        <NavLink className={`sidebar_item`}
+                        <NavLink
+                            onClick={() => setSidebar(false)}
+                            className={`sidebar_item`}
                             to={"/contact"}
                         >
                             Контакты
                         </NavLink>
-                        <NavLink className={`sidebar_item`}
+                        <NavLink
+                            onClick={() => setSidebar(false)}
+                            className={`sidebar_item`}
                             to={"/blog"}
                         >
                             Блог
                         </NavLink>
-                        <NavLink className={`sidebar_item`}
+                        <NavLink
+                            onClick={() => setSidebar(false)}
+                            className={`sidebar_item`}
                             to={"/catalog"}
                         >
                             Каталог
                         </NavLink>
-                        <NavLink className={`sidebar_item`}
+                        <NavLink
+                            onClick={() => setSidebar(false)}
+                            className={`sidebar_item`}
                             to={"/tovar"}
                         >
                             Товары
                         </NavLink>
-                        <NavLink to={"/catalog"}>
+                        <NavLink
+                            onClick={() => setSidebar(false)}
+                            to={"/catalog"}>
                             <button
                                 className="sidebar_catalog_btn"
                             >

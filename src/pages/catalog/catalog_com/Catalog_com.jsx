@@ -1,12 +1,13 @@
 import "./Catalog_com.scss";
 import { memo, useEffect, useState } from "react";
 import Model from "../../../components/model/Model";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import { EffectCards } from 'swiper/modules';
 import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { IoCartOutline } from "react-icons/io5";
 import { useStateValue } from "../../../context";
 
 
@@ -21,11 +22,9 @@ const Catalog = ({ products }) => {
     const productItems = products?.map((produc) => (
         <div className="catalog_card" key={produc.id}>
             <div>
-                <NavLink to={`/product/${produc.id}`}>
-                    <h3>{produc.title}</h3>
-                </NavLink>
+                <NavLink to={`/product/${produc.id}`}><h3>{produc.title}</h3></NavLink>
                 <p
-                    className="flex items-center gap-5">От {produc.price} ₽
+                    className="flex items-center gap-5">{produc.price} ₽
                     <button
                         onClick={() => dispatch({ type: "WISHLIST", payload: produc })}
                         className="text-2xl">
@@ -36,6 +35,12 @@ const Catalog = ({ products }) => {
                                 :
                                 <FaRegHeart />
                         }
+                    </button>
+
+                    <button
+                        onClick={() => dispatch({ type: "ADD_CART", payload: produc })}
+                    >
+                        <IoCartOutline className="text-3xl" />
                     </button>
                 </p>
             </div>
