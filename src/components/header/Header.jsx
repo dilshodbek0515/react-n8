@@ -36,6 +36,8 @@ const Header = ({ language, setLanguage }) => {
             <div className="header_bottom">
                 <BiMenuAltRight onClick={() => setSidebar(true)} className="font-bold text-4xl hidden sidebar_icon" />
                 <Sidebar
+                    language={language}
+                    setLanguage={setLanguage}
                     setSidebar={setSidebar}
                     sidebar={sidebar}
                     setToggle={setToggle}
@@ -52,7 +54,7 @@ const Header = ({ language, setLanguage }) => {
                         <button className="katalog_btn"><HiOutlineMenuAlt1 />{language === "RU" ? "Каталог" : "Catalog"}</button>
                     </Link>
                     <form className="forma" action="">
-                        <input type="text" placeholder="Поиск по товарам" />
+                        <input type="text" placeholder={language === "RU" ? "Поиск по товарам" : "Search by product"} />
                         <button className="search_icon"><IoSearch /></button>
                     </form>
                 </div>

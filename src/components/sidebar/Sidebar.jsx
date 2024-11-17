@@ -5,8 +5,9 @@ import { CiHeart } from "react-icons/ci";
 import { TbAntennaBars5 } from "react-icons/tb";
 import { Link, NavLink } from "react-router-dom";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
+import { IoMdArrowDropdown } from "react-icons/io";
 
-const Sidebar = ({ sidebar, setSidebar }) => {
+const Sidebar = ({ sidebar, setSidebar, language, setLanguage }) => {
     return (
         <>
             {
@@ -17,7 +18,15 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                         </button>
                         <div className="sidebar_left_nav">
                             <Link><CiHeart onClick={() => setSidebar(false)} to={"/heart"} className="sidebar_left_icons" /></Link>
-                            <TbAntennaBars5 className="sidebar_left_icons" />
+                            <button className="language">
+                                <div className="language_content">{language}
+                                    <IoMdArrowDropdown className="language_icon" />
+                                </div>
+                                <div className="language_ru">
+                                    <p className="langu" onClick={() => setLanguage("EN")}>EN</p>
+                                    <p className="langu" onClick={() => setLanguage("RU")}>RU</p>
+                                </div>
+                            </button>
                             <Link to={"/cart"}><IoCartOutline onClick={() => setSidebar(false)} className="sidebar_left_icons" /></Link>
                         </div>
                     </div>
@@ -27,56 +36,56 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                             className={`sidebar_item`}
                             to={"/compane"}
                         >
-                            О компании
+                            {language === "RU" ? "О компании" : "About "}
                         </NavLink>
                         <NavLink
                             onClick={() => setSidebar(false)}
                             className={`sidebar_item`}
                             to={"/dastafka"}
                         >
-                            Доставка и оплата
+                            {language === "RU" ? "Доставка и оплата" : "Delivery"}
                         </NavLink>
                         <NavLink
                             onClick={() => setSidebar(false)}
                             className={`sidebar_item`}
                             to={"/vozvrat"}
                         >
-                            Возврат
+                            {language === "RU" ? "Возврат" : "Return"}
                         </NavLink>
                         <NavLink
                             onClick={() => setSidebar(false)}
                             className={`sidebar_item`}
                             to={"/garant"}
                         >
-                            Гарантии
+                            {language === "RU" ? "Гарантии" : "Guarantees"}
                         </NavLink>
                         <NavLink
                             onClick={() => setSidebar(false)}
                             className={`sidebar_item`}
                             to={"/contact"}
                         >
-                            Контакты
+                            {language === "RU" ? "Контакты" : "Контакты"}
                         </NavLink>
                         <NavLink
                             onClick={() => setSidebar(false)}
                             className={`sidebar_item`}
                             to={"/blog"}
                         >
-                            Блог
+                            {language === "RU" ? "Блог" : "Blog"}
                         </NavLink>
                         <NavLink
                             onClick={() => setSidebar(false)}
                             className={`sidebar_item`}
                             to={"/catalog"}
                         >
-                            Каталог
+                            {language === "RU" ? "Каталог" : "Catalog"}
                         </NavLink>
                         <NavLink
                             onClick={() => setSidebar(false)}
                             className={`sidebar_item`}
                             to={"/tovar"}
                         >
-                            Товары
+                            {language === "RU" ? "Товары" : "Goods"}
                         </NavLink>
                         <NavLink
                             onClick={() => setSidebar(false)}
@@ -85,13 +94,13 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                                 className="sidebar_catalog_btn"
                             >
                                 <HiOutlineMenuAlt1 />
-                                Каталог
+                                {language === "RU" ? "Каталог" : "Catalog"}
                             </button>
                         </NavLink>
                         <a href="tel:8 (800) 890-46-56">
                             <p className="sidebar_call">8 (800) 890-46-56</p>
                         </a>
-                        <p className="sidebar_call_text">Заказать звонок</p>
+                        <p className="sidebar_call_text">{language === "RU" ? "Заказать звонок" : "Request a call"}</p>
                     </nav>
                 </div>
             }

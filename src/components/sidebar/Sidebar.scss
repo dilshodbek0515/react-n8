@@ -34,6 +34,63 @@
                 font-size: 30px;
                 color: black;
             }
+
+            .language {
+                width: 50px;
+                height: 50px;
+                border-radius: 5px;
+                cursor: pointer;
+                border: transparent;
+                position: relative;
+                transition: .5s;
+                background: transparent;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                padding: 0px 5px;
+                margin-top: -10px;
+
+
+                .language_content {
+                    font-size: 18px;
+                    font-weight: 500;
+                    display: flex;
+
+                    .language_icon {
+                        font-size: 20px;
+                    }
+                }
+
+                .language_ru {
+                    position: absolute;
+                    display: none;
+                    z-index: 1;
+                    transition: .5s;
+                    border-radius: 5px;
+                    padding: 5px 5px;
+                    height: 60px;
+                    margin-left: -5px;
+                    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+                    .langu {
+                        width: 40px;
+                        height: 20px;
+                        margin-top: 3px;
+                        font-size: 14px;
+                    }
+
+                    .langu:hover {
+                        color: dodgerblue;
+                        border-radius: 5px;
+                        transition: .5s;
+                    }
+                }
+
+            }
+
+            .language:focus .language_ru {
+                display: block;
+                transition: .5s;
+                margin-top: 10px;
+            }
         }
     }
 
@@ -126,7 +183,7 @@
 @media (max-width:400px) {
     .sidebar_collection {
         .sidebar_wrapper {
-            padding: 330px 10px 30px 10px;
+            padding: 370px 10px 30px 10px;
 
             .sidebar_catalog_btn {
                 width: 200px;
