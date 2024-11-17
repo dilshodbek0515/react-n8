@@ -37,7 +37,9 @@ const Header = () => {
                 <BiMenuAltRight onClick={() => setSidebar(true)} className="font-bold text-4xl hidden sidebar_icon" />
                 <Sidebar
                     setSidebar={setSidebar}
-                    sidebar={sidebar} />
+                    sidebar={sidebar}
+                    setToggle={setToggle}
+                />
                 <Link to={"/"}>
                     <img className="logo w-[300px] " src={logo} alt="logo" />
                 </Link>

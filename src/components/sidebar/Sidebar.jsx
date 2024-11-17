@@ -16,9 +16,9 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                             <IoCloseCircleOutline />
                         </button>
                         <div className="sidebar_left_nav">
-                            <Link to={"/heart"}><CiHeart className="sidebar_left_icons" /></Link>
+                            <Link><CiHeart onClick={() => setSidebar(false)} to={"/heart"} className="sidebar_left_icons" /></Link>
                             <TbAntennaBars5 className="sidebar_left_icons" />
-                            <Link to={"/cart"}><IoCartOutline className="sidebar_left_icons" /></Link>
+                            <Link to={"/cart"}><IoCartOutline onClick={() => setSidebar(false)} className="sidebar_left_icons" /></Link>
                         </div>
                     </div>
                     <nav className="sidebar_wrapper">

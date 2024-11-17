@@ -93,12 +93,12 @@
             gap: 40px;
 
             .compane_right_text {
-                font-size: 20px;
+                font-size: 16px;
                 font-weight: 500;
                 line-height: 30px;
                 text-align: left;
                 color: #454545;
-                max-width: 640px;
+                max-width: 600px;
             }
         }
     }
@@ -165,6 +165,32 @@
                             font-size: 30px;
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:400px) {
+    .o_com {
+        .compane {
+            .compane_left {
+                .compane_card_wrap {
+                    .compane_card {
+                        .compane_card_text {
+                            font-size: 24px;
+                        }
+
+                        .compane_card_text_two {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+
+            .compane_right {
+                .compane_right_text {
+                    font-size: 14px;
                 }
             }
         }

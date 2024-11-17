@@ -92,3 +92,20 @@
         }
     }
 }
+
+@media (max-width:400px) {
+    .blog {
+        padding: 0px 20px;
+
+        .blog_top {
+            .blogs_title {
+                font-size: 30px;
+            }
+
+            .blogs_btn {
+                width: 150px;
+
+            }
+        }
+    }
+}
