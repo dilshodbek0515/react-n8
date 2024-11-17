@@ -11,12 +11,12 @@ const blogs = [
         </div>
     ))
 ]
-const Blog = () => {
+const Blog = ({ language }) => {
     return (
         <div className="blog">
             <div className="blog_top">
-                <h2 className="blogs_title">Блог</h2>
-                <Link to={"/blog"}><button className="blogs_btn">Перейти в блог</button></Link>
+                <h2 className="blogs_title">{language === "RU" ? "Блог" : "Blog"}</h2>
+                <Link to={"/blog"}><button className="blogs_btn">{language === "RU" ? "Перейти в блог" : "Go to blog"}</button></Link>
             </div>
             <div className="blog_bottom">
                 {blogs}

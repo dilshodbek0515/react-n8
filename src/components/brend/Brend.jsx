@@ -9,11 +9,11 @@ import brend1 from "../../assets/images/brend1.png"
 import brend2 from "../../assets/images/brend2.png"
 import brend3 from "../../assets/images/brend3.png"
 import brend4 from "../../assets/images/brend4.png"
-const Brend = () => {
+const Brend = ({ language }) => {
     return (
         <div className="brend">
             <div className="brend_top">
-                <h2 className="brend_text">Только проверенные бренды</h2>
+                <h2 className="brend_text">{language === "RU" ? "Только проверенные бренды" : "Only proven brands"}</h2>
                 <div className="arrow_wrap">
                     <button className="arrow"><BsArrowLeft /></button>
                     <button className="arrow"><BsArrowRight /></button>

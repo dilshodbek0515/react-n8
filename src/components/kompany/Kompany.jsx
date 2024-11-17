@@ -14,12 +14,12 @@ const company = [
         </div>
     ))
 ]
-const Kompany = () => {
+const Kompany = ({ language }) => {
     return (
         <div className="company">
             <div className="company_top">
-                <h2 className="company_title">Почему NORNLIGHT?</h2>
-                <Link to={"/compane"}><button className="company_btn">О компании</button></Link>
+                <h2 className="company_title">{language === "RU" ? "Почему NORNLIGHT?" : "Why NORNLIGHT?"}</h2>
+                <Link to={"/compane"}><button className="company_btn">{language === "RU" ? "О компании" : "The company"}</button></Link>
             </div>
             <div className="company_bottom">
                 {company}

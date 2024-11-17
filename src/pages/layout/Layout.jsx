@@ -2,14 +2,14 @@ import React from 'react'
 import Header from '../../components/header/Header'
 import Footer from '../../components/footer/Footer'
 import { Outlet } from 'react-router-dom'
-const Layout = () => {
+const Layout = ({ language, setLanguage }) => {
     return (
         <>
-            <Header />
+            <Header language={language} setLanguage={setLanguage} />
             <main>
                 <Outlet />
             </main>
-            <Footer />
+            <Footer language={language} />
         </>
     )
 }

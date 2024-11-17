@@ -8,6 +8,7 @@
     gap: 30px;
 
     .header_top {
+
         nav {
             display: flex;
             align-items: center;
@@ -20,19 +21,12 @@
                 justify-content: center;
                 gap: 30px;
 
-                .link {
-                    font-size: 14px;
-                    font-weight: 700;
-                    line-height: 19.12px;
-                    text-align: left;
-                    color: #625f5f;
-                }
-
                 .nav_color.active {
                     color: black;
                     border-bottom: 2px solid black;
                     padding-bottom: 3px;
                 }
+
             }
 
             .header_top_contact {
@@ -123,6 +117,60 @@
                 span {
                     font-size: 16px;
                 }
+            }
+
+            .language {
+                width: 50px;
+                height: 50px;
+                border-radius: 5px;
+                cursor: pointer;
+                border: transparent;
+                position: relative;
+                transition: .5s;
+                background: transparent;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                padding: 0px 5px;
+            }
+
+            .language_content {
+                font-size: 18px;
+                font-weight: 500;
+                display: flex;
+            }
+
+            .language_icon {
+                font-size: 20px;
+            }
+
+            .language_ru {
+                position: absolute;
+                display: none;
+                z-index: 1;
+                transition: .5s;
+                border-radius: 5px;
+                padding: 5px 5px;
+                height: 60px;
+                margin-left: -5px;
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+            }
+
+            .language:focus .language_ru {
+                display: block;
+                transition: .5s;
+                margin-top: 10px;
+            }
+
+            .langu {
+                width: 40px;
+                height: 20px;
+                margin-top: 3px;
+                font-size: 14px;
+            }
+
+            .langu:hover {
+                color: dodgerblue;
+                border-radius: 5px;
+                transition: .5s;
             }
         }
     }

@@ -12,14 +12,14 @@ const ProductPage = () => {
     const increment = () => {
         setCount(p => p + 1);
     };
-    const setincrement = () => {
+    const decrement = () => {
         setCount(p => p - 1);
     };
     const { id } = useParams();
     console.log(count);
 
     const { data, error, loading } = useFetch(`${BASE_URL}/products/${id}`);
-    if (loading) return <p>Loading...</p>;
+    if (loading) return <p>Hello</p>;
     if (error) return <p>Error: {error.message}</p>;
     if (!data) return <p>No data found</p>;
 
@@ -47,7 +47,7 @@ const ProductPage = () => {
                 <div className="counter">
                     <div className="count">
                         <button
-                            disabled={count === 1} onClick={() => setincrement()}>-
+                            disabled={count === 1} onClick={() => decrement()}>-
                         </button>
                         {count}
                         <button onClick={() => increment()}>+</button>

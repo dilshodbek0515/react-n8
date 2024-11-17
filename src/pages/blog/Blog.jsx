@@ -3,7 +3,7 @@ import { memo, useEffect } from "react";
 import BlogComponent from "../../components/blog/Blog";
 import { Link } from "react-router-dom"
 
-const BlogPage = () => {
+const BlogPage = ({ language }) => {
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -13,13 +13,13 @@ const BlogPage = () => {
             <div className="oplata">
                 <div className="flex gap-5 items-center">
                     <Link to={"/"}>
-                        <span>Главная</span>
+                        <span>{language === "RU" ? "Главная" : "Home"}</span>
                     </Link>
                     <Link to={"/blog"}>
-                        <p className="mt-[2px]">Блог</p>
+                        <p className="mt-[2px]">{language === "RU" ? "Блог" : "Blog"}</p>
                     </Link>
                 </div>
-                <h2>Блог</h2>
+                <h2>{language === "RU" ? "Блог" : "Blog"}</h2>
             </div>
             <BlogComponent />
             <BlogComponent />

@@ -4,14 +4,13 @@ import "./Cart.scss"
 import { memo } from "react"
 import { IoTrashOutline } from "react-icons/io5";
 
-const Cart = () => {
+const Cart = ({ language }) => {
     const [state, dispatch] = useStateValue()
     console.log(state);
 
     return (
         <>
             <div className="Cart_wrapper">
-
                 {
                     state.cart.length
                         ?
@@ -23,7 +22,7 @@ const Cart = () => {
                                     <strong>{carts.price} ₽ * {carts.amount} = {(carts.price * carts.amount).brm()} ₽</strong>
                                 </div>
                                 <p className="cart_description">{carts.description}</p>
-                                <p className="hard_code">RAD-COMBO-50/XXX/230/XXX/XXX/S4/XS</p>
+                                <p className="hard_code">{language === "RU" ? "RAD-COMBO-50/XXX/230/XXX/XXX/S4/XS" : "RAD-COMBO-50/ХХХ/230/ХХХ/ХХХ/Сч/КСС"}</p>
                                 <div className="cart_count">
                                     <button disabled={carts.amount <= 1} className="minus" onClick={() => dispatch({ type: "DECREMENT_CART", payload: carts })}>-</button>
                                     <span>{carts.amount}</span>
@@ -35,7 +34,7 @@ const Cart = () => {
                         :
                         <div className="closed_cart flex items-center justify-center flex-col">
                             <img className="w-[400px] h-[400px]" src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-illustration-download-in-svg-png-gif-file-formats--shopping-ecommerce-simple-error-state-pack-user-interface-illustrations-6024626.png" alt="img" />
-                            <Link to={"/catalog"}><button className="cart_go">Go Home</button></Link>
+                            <Link to={"/catalog"}><button className="cart_go">{language === "RU" ? "Иди Главная" : "Go Home"}</button></Link>
                         </div>
                 }
             </div>

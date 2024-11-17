@@ -3,7 +3,7 @@ import { useStateValue } from '../../context'
 import Catalog_com from "../catalog/catalog_com/Catalog_com"
 import { Link } from 'react-router-dom'
 
-const Heart = () => {
+const Heart = ({ language }) => {
     const [state, dispatch] = useStateValue()
 
     return (
@@ -19,7 +19,7 @@ const Heart = () => {
                             <button
                                 className='text-white border text-3xl px-10 py-2 bg-gray-600 rounded-3xl hover:text-gray-600 hover:border border-gray-600 hover:bg-white'
                             >
-                                Go Home
+                                {language === "RU" ? "Иди Главная" : "Go Home"}
                             </button>
                         </Link>
                     </div>

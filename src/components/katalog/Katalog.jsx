@@ -14,12 +14,12 @@ const obj = [
         </div>
     ))
 ]
-const Katalog = () => {
+const Katalog = ({ language }) => {
     return (
         <section className="catalog">
             <div className="catalog_top">
-                <p className="catalog_title">Каталог</p>
-                <Link to={"/catalog"}><button className="catalog_btn">Весь каталог</button></Link>
+                <p className="catalog_title">{language === "RU" ? "Каталог" : "Catalog"}</p>
+                <Link to={"/catalog"}><button className="catalog_btn">{language === "RU" ? "Весь каталог" : "Entire catalog"}</button></Link>
             </div>
             <div className="catalog_bottom">
                 {obj}

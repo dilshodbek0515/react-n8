@@ -22,12 +22,12 @@ const tavar = [
         </div>
     ))
 ]
-const Tovar = () => {
+const Tovar = ({ language }) => {
     return (
         <div className="tovar">
             <div className="tovar_top">
-                <h2 className="tovar_title">Популярные товары</h2>
-                <Link to={"/tovar"}><button className="tovar_btn">Все товары</button></Link>
+                <h2 className="tovar_title">{language === "RU" ? "Популярные товары" : "Popular Products"}</h2>
+                <Link to={"/tovar"}><button className="tovar_btn">{language === "RU" ? "Все товары" : "All products"}</button></Link>
             </div>
             <div className="tovar_bottom">
                 {tavar}
