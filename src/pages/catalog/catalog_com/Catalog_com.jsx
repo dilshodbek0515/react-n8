@@ -65,13 +65,13 @@ const Catalog = ({ products }) => {
                             className="mySwiper"
                         >
                             <div>
-                                <SwiperSlide>
+                                <SwiperSlide className="slide">
                                     <img className="detail_img" src={item.url} alt="detail_img" />
                                 </SwiperSlide>
-                                <SwiperSlide>
+                                <SwiperSlide className="slide">
                                     <img className="detail_img" src={item.url} alt="detail_img" />
                                 </SwiperSlide>
-                                <SwiperSlide>
+                                <SwiperSlide className="slide">
                                     <img className="detail_img" src={item.url} alt="detail_img" />
                                 </SwiperSlide>
                             </div>
