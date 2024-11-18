@@ -23,12 +23,14 @@ const Cart = ({ language }) => {
                                 </div>
                                 <p className="cart_description">{carts.description}</p>
                                 <p className="hard_code">{language === "RU" ? "RAD-COMBO-50/XXX/230/XXX/XXX/S4/XS" : "RAD-COMBO-50/ХХХ/230/ХХХ/ХХХ/Сч/КСС"}</p>
-                                <div className="cart_count">
-                                    <button disabled={carts.amount <= 1} className="minus" onClick={() => dispatch({ type: "DECREMENT_CART", payload: carts })}>-</button>
-                                    <span>{carts.amount}</span>
-                                    <button disabled={carts.stock <= carts.amount} className="plus" onClick={() => dispatch({ type: "ADD_CART", payload: carts })}>+</button>
+                                <div className="flex justify-between items-center c_t">
+                                    <div className="cart_count">
+                                        <button disabled={carts.amount <= 1} className="minus" onClick={() => dispatch({ type: "DECREMENT_CART", payload: carts })}>-</button>
+                                        <span>{carts.amount}</span>
+                                        <button disabled={carts.stock <= carts.amount} className="plus" onClick={() => dispatch({ type: "ADD_CART", payload: carts })}>+</button>
+                                    </div>
+                                    <IoTrashOutline onClick={() => dispatch({ type: "REMOVE_CART", payload: carts })} className="text-3xl text-red-700 trash" />
                                 </div>
-                                <IoTrashOutline onClick={() => dispatch({ type: "REMOVE_CART", payload: carts })} className="text-3xl mt-[60px] text-red-700" />
                             </div>
                         ))
                         :
