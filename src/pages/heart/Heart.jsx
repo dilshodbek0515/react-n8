@@ -12,12 +12,12 @@ const Heart = ({ language }) => {
                 state.wishlist.length === 0
                     ?
                     <div className='max-w-[1400px] h-[auto] mx-auto flex items-center justify-center flex-col gap-20'>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIXPHNWK4DfjjsbizhmlBLJRgUm9jUHnOm3Q&s" alt="img" />
+                        <img src="https://cdni.iconscout.com/illustration/premium/thumb/empty-wishlist-illustration-download-in-svg-png-gif-file-formats--online-shop-store-shopping-site-ecommerce-marketplace-states-pack-windows-interface-illustrations-9824483.png?f=webp" alt="img" />
                         <Link
                             to={"/catalog"}
                         >
                             <button
-                                className='text-white border text-3xl px-10 py-2 bg-gray-600 rounded-3xl hover:text-gray-600 hover:border border-gray-600 hover:bg-white'
+                                className='text-white border text-xl px-10 py-2 bg-gray-600 rounded-3xl hover:text-gray-600 hover:border border-gray-600 hover:bg-white'
                             >
                                 {language === "RU" ? "Иди Главная" : "Go Home"}
                             </button>
