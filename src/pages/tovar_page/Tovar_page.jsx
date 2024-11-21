@@ -5,7 +5,7 @@ const Tovar_page = () => {
         scrollTo(0, 0)
     }, [])
     return (
-        <div>
+        <div className='mt-52'>
             <Tovar_p />
         </div>
     )

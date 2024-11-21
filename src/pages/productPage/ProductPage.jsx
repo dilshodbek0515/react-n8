@@ -1,22 +1,24 @@
 import "./ProductPage.scss"
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useFetch } from "../../hook/useFetch";
-import { CiHeart } from "react-icons/ci";
-import { FaSquareOdnoklassniki, FaVk, FaTelegram, FaSquareWhatsapp } from "react-icons/fa6";
-import { useState } from "react";
+import { FaSquareOdnoklassniki, FaVk, FaTelegram, FaSquareWhatsapp, FaRegHeart, FaHeart } from "react-icons/fa6";
+import { useStateValue } from "../../context"
 const BASE_URL = "https://672f3e4f229a881691f24b98.mockapi.io";
 
 const ProductPage = () => {
-    const [count, setCount] = useState(0)
 
-    const increment = () => {
-        setCount(p => p + 1);
-    };
-    const decrement = () => {
-        setCount(p => p - 1);
-    };
     const { id } = useParams();
-    console.log(count);
+    const [state, dispatch] = useStateValue()
+    let amount = state?.cart?.find(item => item.id === id)?.amount
+
+    const decrement = (data) => {
+        if (amount > 1) {
+            dispatch({ type: "DECREMENT_CART", payload: data })
+        } else {
+            dispatch({ type: "REMOVE_CART", payload: data })
+        }
+    }
+
 
     const { data, error, loading } = useFetch(`${BASE_URL}/products/${id}`);
     if (loading) return <p>Hello</p>;
@@ -45,15 +47,34 @@ const ProductPage = () => {
                 <strong>{data.price} 000 ₽ <del>{data.price2} 000 ₽</del></strong>
                 <p className="single_desc">{data.description}</p>
                 <div className="counter">
-                    <div className="count">
-                        <button
-                            disabled={count === 1} onClick={() => decrement()}>-
-                        </button>
-                        {count}
-                        <button onClick={() => increment()}>+</button>
-                    </div>
-                    <button className="korzina">В корзину</button>
-                    <Link to={"/heart"}><button className="heart"><CiHeart /></button></Link>
+                    {
+                        state?.cart?.some(item => item.id === id)
+                            ?
+                            <div className="count">
+                                <button onClick={() => decrement(data)}>-</button>
+                                <span>
+                                    {
+                                        amount
+                                    }
+                                </span>
+                                <button onClick={() => dispatch({ type: "ADD_CART", payload: data })}>+</button>
+                            </div>
+                            :
+                            <div onClick={() => dispatch({ type: "ADD_CART", payload: data })}>
+                                <button className="korzina">В корзину</button>
+                            </div>
+                    }
+
+                    <button
+                        onClick={() => dispatch({ type: "WISHLIST", payload: data })} className="heart">
+                        {
+                            state.wishlist?.some(item => item.id === id)
+                                ?
+                                <FaHeart />
+                                :
+                                <FaRegHeart />
+                        }
+                    </button>
                 </div>
             </div>
         </div>

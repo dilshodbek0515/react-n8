@@ -27,13 +27,12 @@ const Catalog = ({ products }) => {
                     className="flex items-center gap-5">{produc.price} ₽
                     <button
                         onClick={() => dispatch({ type: "WISHLIST", payload: produc })}
-                        className="text-2xl">
+                        className="text-2xl"
+                    >
                         {
                             state.wishlist?.some(p => p.id === produc.id)
-                                ?
-                                <FaHeart />
-                                :
-                                <FaRegHeart />
+                                ? <FaHeart />
+                                : <FaRegHeart />
                         }
                     </button>
 

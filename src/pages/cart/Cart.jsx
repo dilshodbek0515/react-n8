@@ -5,13 +5,6 @@ import { memo, useRef } from "react"
 import { IoTrashOutline } from "react-icons/io5";
 const BOT_TOKEN = "7663778517:AAHLTijMCfFznDWG_1RuAK8YxoRBhYsWPe4"
 const CHAT_ID = 6891591255
-const USER_ID = 6891591255
-
-
-//https://api.telegram.org/bot7663778517:AAHLTijMCfFznDWG_1RuAK8YxoRBhYsWPe4/getUpdates
-
-//https://api.telegram.org/bot[your_token]/sendMessage?chat_id=[your chat_id]
-
 const Cart = ({ language }) => {
     const [state, dispatch] = useStateValue()
 

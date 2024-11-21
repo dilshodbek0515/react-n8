@@ -7,7 +7,7 @@ const Heart = ({ language }) => {
     const [state, dispatch] = useStateValue()
 
     return (
-        <div>
+        <div className='mt-52'>
             {
                 state.wishlist.length === 0
                     ?
