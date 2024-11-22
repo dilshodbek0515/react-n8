@@ -12,7 +12,7 @@ const Heart = ({ language }) => {
                 state.wishlist.length === 0
                     ?
                     <div className='max-w-[1400px] h-[auto] mx-auto flex items-center justify-center flex-col gap-20'>
-                        <img src="https://cdni.iconscout.com/illustration/premium/thumb/empty-wishlist-illustration-download-in-svg-png-gif-file-formats--online-shop-store-shopping-site-ecommerce-marketplace-states-pack-windows-interface-illustrations-9824483.png?f=webp" alt="img" />
+                        <img className='w-80' src="https://cdni.iconscout.com/illustration/premium/thumb/empty-wishlist-illustration-download-in-svg-png-gif-file-formats--online-shop-store-shopping-site-ecommerce-marketplace-states-pack-windows-interface-illustrations-9824483.png?f=webp" alt="img" />
                         <Link
                             to={"/catalog"}
                         >

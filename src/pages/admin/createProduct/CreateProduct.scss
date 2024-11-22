@@ -1,0 +1,48 @@
+.create_p {
+    max-width: 1400px;
+    height: 100vh;
+    padding: 0px 50px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .create_form {
+        width: 800px;
+        height: 600px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        background-color: #fff;
+
+        input {
+            width: 100%;
+            height: 50px;
+            border: 1px solid gray;
+            padding: 0px 10px;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            height: 50px;
+            border-radius: 10px;
+            background-color: #454545;
+            transition: .5s;
+            font-size: 20px;
+            color: white;
+
+            &:hover {
+                background: none;
+                color: #454545;
+                border: 1px solid #454545;
+                transition: .5s;
+            }
+        }
+    }
+}

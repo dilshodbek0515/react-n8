@@ -15,6 +15,9 @@ import Heart from "../pages/heart/Heart";
 import Tovar_p from "../pages/tovar_page/Tovar_page"
 import Cart from "../pages/cart/Cart";
 import Layout from "../pages/layout/Layout";
+import Admin from "../pages/admin/Admin";
+import CreateProduct from "../pages/admin/createProduct/CreateProduct";
+import ManageProduct from "../pages/admin/manageProduct/manageProduct";
 
 const Routesone = () => {
 
@@ -38,7 +41,11 @@ const Routesone = () => {
                     <Route path="/product/:id" element={<ProductPage language={language} />} />
                 </Route >
                 <Route path="*" element={<Error language={language} />} />
-            </Routes>
+                <Route path="/admin" element={<Admin />} >
+                    <Route path="createProduct" element={<CreateProduct />} />
+                    <Route path="manageProduct" element={<ManageProduct />} />
+                </Route>
+            </Routes >
         </>
     );
 }

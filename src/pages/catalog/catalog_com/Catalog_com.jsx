@@ -9,9 +9,10 @@ import { EffectCards } from 'swiper/modules';
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { useStateValue } from "../../../context";
+import { FiTrash2 } from "react-icons/fi";
 
 
-const Catalog = ({ products }) => {
+const Catalog = ({ products, admin }) => {
     const [state, dispatch] = useStateValue()
     const [item, setItem] = useState(null)
     useEffect(() => {
@@ -35,12 +36,17 @@ const Catalog = ({ products }) => {
                                 : <FaRegHeart />
                         }
                     </button>
-
-                    <button
-                        onClick={() => dispatch({ type: "ADD_CART", payload: produc })}
-                    >
-                        <IoCartOutline className="text-3xl" />
-                    </button>
+                    {
+                        admin
+                            ?
+                            <FiTrash2 className="text-3xl" />
+                            :
+                            <button
+                                onClick={() => dispatch({ type: "ADD_CART", payload: produc })}
+                            >
+                                <IoCartOutline className="text-3xl" />
+                            </button>
+                    }
                 </p>
             </div>
             <img onClick={() => setItem(produc)} className="catalog_img" src={produc.url} alt="" />
