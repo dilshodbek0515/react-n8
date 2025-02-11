@@ -56,7 +56,7 @@ const Catalog = ({ products, admin }) => {
         onClick={() => setItem(produc)}
         className='catalog_img'
         src={produc.url}
-        alt=''
+        alt='img'
       />
     </div>
   ))
