@@ -37,7 +37,7 @@ const Routesone = () => {
           <Route path='/garant' element={<Garant language={language} />} />
           <Route path='/contact' element={<Contact language={language} />} />
           <Route path='/blog' element={<Blog language={language} />} />
-          <Route path='/catalog' element={<Catalog language={language} />} />
+          <Route path='/catalog' element={<Catalog language={language}  />} />
           <Route path='/service' element={<Service language={language} />} />
           <Route path='/heart' element={<Heart language={language} />} />
           <Route path='/tovar' element={<Tovar_p language={language} />} />

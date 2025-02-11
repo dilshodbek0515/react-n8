@@ -60,6 +60,7 @@ export const reducer = (state, action) => {
       }
       localStorage.setItem('storage', JSON.stringify(result))
       return result
+
     case 'REMOVE_CART':
       result = {
         ...state,
@@ -67,11 +68,13 @@ export const reducer = (state, action) => {
       }
       localStorage.setItem('storage', JSON.stringify(result))
       return result
-    case 'CLEAR_CART':
+   
+      case 'CLEAR_CART':
       result = { ...state, cart: [] }
       localStorage.setItem('storage', JSON.stringify(result))
       return result
-    case 'ADD_TOKEN':
+   
+      case 'ADD_TOKEN':
       result = { ...state, token: action.payload }
       localStorage.setItem('storage', JSON.stringify(result))
       return result
