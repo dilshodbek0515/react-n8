@@ -6,7 +6,6 @@ const BASE_URL = 'https://672f3e4f229a881691f24b98.mockapi.io'
 
 const Wishlist = () => {
   const [products, setProducts] = useState(null)
-
   useEffect(() => {
     axios
       .get(`${BASE_URL}/products`)
